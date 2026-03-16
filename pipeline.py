@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 # ─── Configuration ────────────────────────────────────────────────────────────
 
-DATA_PATH = 'data\sales_records.csv'
+DATA_PATH = 'data/sales_records.csv'
 OUTPUT_DIR = 'output'
 
 
@@ -124,7 +124,7 @@ def create_visualizations(df, output_dir=OUTPUT_DIR):
 
     cat_revenue = df.groupby('product_category')['revenue'].sum()
     fig1, ax1 = plt.subplots(figsize=(10, 6))
-    ax1.bar(cat_revenue.index, cat_revenue.values, color='skyblue')
+    ax1.bar(cat_revenue.index, cat_revenue.values, color="#FF00B7")
     ax1.set_title('Total Revenue by Product Category')
     ax1.set_xlabel('Product Category')
     ax1.set_ylabel('Total Revenue')
